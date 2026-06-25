@@ -1,0 +1,35 @@
+name: Bug report
+description: Воспроизводимая ошибка приложения
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Устройство и версия Android
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Безопасные логи
+      description: Не добавляйте OTP, cookies, email и содержимое документов.

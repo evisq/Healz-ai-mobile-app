@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Synthetic Lab Report</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f2f3f5;
+        color: #232126;
+        font: 14px/1.45 Arial, sans-serif;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 18px auto;
+        padding: 14mm;
+        background: white;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .warning {
+        margin-bottom: 18px;
+        padding: 10px 14px;
+        border: 2px solid #b33b68;
+        color: #8a2349;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-align: center;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0 0 4px;
+        font-size: 28px;
+      }
+
+      h2 {
+        margin: 26px 0 10px;
+        color: #873452;
+        font-size: 17px;
+      }
+
+      .muted {
+        color: #6c6870;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 30px;
+        padding: 14px;
+        background: #fff6f9;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+
+      th,
+      td {
+        padding: 8px 7px;
+        border: 1px solid #b8b6bb;
+        text-align: left;
+      }
+
+      th {
+        background: #eeecef;
+      }
+
+      .flag {
+        color: #a12654;
+        font-weight: 700;
+      }
+
+      .fine-print {
+        margin-top: 22px;
+        color: #57535b;
+        font-size: 9px;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .page {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page">
+      <div class="warning">SYNTHETIC TEST DATA — NOT A REAL MEDICAL RECORD</div>
+      <header>
+        <div>
+          <h1>Northstar Demo Laboratory</h1>
+          <div class="muted">Document compression test fixture</div>
+        </div>
+        <div>
+          <strong>Report ID:</strong> DEMO-2026-0042<br />
+          <strong>Issued:</strong> 25 Jun 2026
+        </div>
+      </header>
+
+      <div class="meta">
+        <div><strong>Patient:</strong> Example Person</div>
+        <div><strong>Date of birth:</strong> 01 Jan 1990</div>
+        <div><strong>Sample:</strong> Synthetic dataset</div>
+        <div><strong>Status:</strong> Testing only</div>
+      </div>
+
+      <h2>Complete blood count</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th>Result</th>
+            <th>Unit</th>
+            <th>Reference interval</th>
+            <th>Flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Hemoglobin</td><td>13.7</td><td>g/dL</td><td>12.0–16.0</td><td></td></tr>
+          <tr><td>Hematocrit</td><td>41.2</td><td>%</td><td>36.0–46.0</td><td></td></tr>
+          <tr><td>White blood cells</td><td>6.42</td><td>10⁹/L</td><td>4.00–10.00</td><td></td></tr>
+          <tr><td>Platelets</td><td>247</td><td>10⁹/L</td><td>150–400</td><td></td></tr>
+          <tr><td>Mean cell volume</td><td>89.4</td><td>fL</td><td>80.0–100.0</td><td></td></tr>
+          <tr><td>Demo marker alpha</td><td>0.073</td><td>µg/L</td><td>0.010–0.060</td><td class="flag">H</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Metabolic panel</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th>Result</th>
+            <th>Unit</th>
+            <th>Reference interval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sodium</td><td>140</td><td>mmol/L</td><td>136–145</td></tr>
+          <tr><td>Potassium</td><td>4.3</td><td>mmol/L</td><td>3.5–5.1</td></tr>
+          <tr><td>Creatinine</td><td>0.84</td><td>mg/dL</td><td>0.50–1.10</td></tr>
+          <tr><td>Glucose</td><td>92</td><td>mg/dL</td><td>70–99</td></tr>
+          <tr><td>Albumin</td><td>4.4</td><td>g/dL</td><td>3.5–5.2</td></tr>
+        </tbody>
+      </table>
+
+      <p class="fine-print">
+        This fixture contains deliberately small text, decimal values, Unicode
+        symbols and table borders. It exists only to evaluate whether local
+        image and PDF compression keeps documents legible.
+      </p>
+    </section>
+
+    <section class="page">
+      <div class="warning">SYNTHETIC TEST DATA — PAGE 2 OF 2</div>
+      <h1>Additional synthetic measurements</h1>
+      <p>
+        The second page verifies that PDF processing preserves page count,
+        selectable text, vector lines and repeated embedded content.
+      </p>
+
+      <h2>Detailed values</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Value</th>
+            <th>Precision check</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>SYN-001</td><td>0.000137</td><td>137 × 10⁻⁶</td><td>Must remain readable</td></tr>
+          <tr><td>SYN-002</td><td>12.0459</td><td>± 0.0031</td><td>Fine decimal detail</td></tr>
+          <tr><td>SYN-003</td><td>98.7654</td><td>µmol/L</td><td>Unicode unit</td></tr>
+          <tr><td>SYN-004</td><td>1,024</td><td>cells/µL</td><td>Thousands separator</td></tr>
+          <tr><td>SYN-005</td><td>&lt; 0.01</td><td>negative</td><td>Comparison symbol</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Compression review prompts</h2>
+      <ol>
+        <li>Can every digit be distinguished at 200% zoom?</li>
+        <li>Can this paragraph still be selected and copied?</li>
+        <li>Are thin table borders continuous?</li>
+        <li>Does the processed PDF still contain exactly two pages?</li>
+        <li>Is the processed file actually smaller than the original?</li>
+      </ol>
+
+      <p class="fine-print">
+        No values on this page correspond to a real person, diagnosis,
+        laboratory or medical decision.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+name: Feature slice
+description: Вертикальный срез реализации с проверяемым пользовательским результатом
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Пользовательский результат
+      description: Что пользователь сможет сделать после выполнения задачи?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Перечислите наблюдаемые и проверяемые критерии.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Проверка
+      description: Команды и сценарии на физическом Android-телефоне.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Риски и ограничения
+      description: Что может сломаться или потребовать fallback?

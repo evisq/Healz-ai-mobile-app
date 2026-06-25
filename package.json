@@ -1,0 +1,29 @@
+{
+  "name": "healz-ai-mobile-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~56.0.12",
+    "expo-status-bar": "~56.0.4",
+    "react": "19.2.3",
+    "react-native": "0.85.3"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "doctor": "npx expo-doctor",
+    "check": "npm run typecheck && npm run doctor"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24.3.0 <25"
+  },
+  "packageManager": "npm@11.17.0"
+}
