@@ -5,24 +5,57 @@
     "version": "1.0.0",
     "scheme": "healz-mobile",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/healz-heart.png",
+    "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "com.evisq.healzaimobile",
       "supportsTablet": true
     },
     "android": {
       "package": "com.evisq.healzaimobile",
       "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#FFF4F8",
+        "foregroundImage": "./assets/healz-heart.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/healz-heart.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFF8FA",
+          "image": "./assets/splash-transparent.png",
+          "imageWidth": 1,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#181416",
+            "image": "./assets/splash-transparent.png"
+          }
+        }
+      ],
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "application/pdf",
+            "image/*"
+          ],
+          "androidMultiIntentFilters": [
+            "application/pdf",
+            "image/*"
+          ],
+          "iosAppGroupIdentifier": "group.com.evisq.healzaimobile",
+          "iosActivationRules": {
+            "NSExtensionActivationSupportsFileWithMaxCount": 5,
+            "NSExtensionActivationSupportsImageWithMaxCount": 5
+          },
+          "iosShareExtensionBundleIdentifier": "com.evisq.healzaimobile.ShareExtension"
+        }
+      ]
+    ]
   }
 }
